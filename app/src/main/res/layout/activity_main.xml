@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+<!--    &lt;!&ndash; Status Bar Time &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/status_time"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:text="8:17"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="14sp"/>-->
+
+    <!-- Quote Card -->
+
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="618dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="QUOTE VISTA"
+        android:textColor="#2E0854"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        android:backgroundTint="#050405">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quote of the Day"
+                android:textSize="22sp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:textColor="#FFD700"
+
+                />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/open"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:id="@+id/quote_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We lost because we told ourselves we lost."
+                android:textSize="26sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:fontFamily="serif-monospace"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quote_tv"
+                android:id="@+id/author_tv"
+                android:text="— Leo Tolstoy"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:gravity="end"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+               />
+
+
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="New Quote"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#4169E1"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+            />
+
+
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/progress_bar"
+                android:visibility="gone"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+
+                <ImageButton
+                    android:id="@+id/audio_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_audio"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_marginEnd="20dp"/>
+
+                <ImageButton
+                    android:id="@+id/copy_button"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src="@drawable/ic_copy"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_marginEnd="20dp"/>
+
+                <ImageButton
+                    android:id="@+id/share_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_share"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
